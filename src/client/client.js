@@ -120,16 +120,7 @@ class Client {
     const config = this._buildAxiosConfig({
       headers: {
         'x-fantasy-filter': JSON.stringify({
-          players: {
-            filterStatus: {
-              value: ['FREEAGENT', 'WAIVERS']
-            },
-            limit: 2000,
-            sortPercOwned: {
-              sortAsc: false,
-              sortPriority: 1
-            }
-          }
+          players: {}
         })
       }
     });

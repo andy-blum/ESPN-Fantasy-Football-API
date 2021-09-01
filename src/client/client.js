@@ -120,7 +120,13 @@ class Client {
     const config = this._buildAxiosConfig({
       headers: {
         'x-fantasy-filter': JSON.stringify({
-          players: {}
+          players: {
+            limit: -1,
+            sortPercOwned: {
+              sortAsc: false,
+              sortPriority: 1
+            }
+          }
         })
       }
     });

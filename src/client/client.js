@@ -111,10 +111,10 @@ class Client {
    * @param  {number} options.scoringPeriodId The scoring period to grab free agents from.
    * @returns {FreeAgentPlayer[]} The list of free agents.
    */
-  getFreeAgents({ seasonId, scoringPeriodId }) {
+  getFreeAgents({ seasonId }) {
     const route = this.constructor._buildRoute({
       base: `${seasonId}/segments/0/leagues/${this.leagueId}`,
-      params: `?scoringPeriodId=${scoringPeriodId}&view=kona_player_info`
+      params: `&view=kona_player_info`
     });
 
     const config = this._buildAxiosConfig({

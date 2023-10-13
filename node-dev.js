@@ -12239,7 +12239,7 @@ var Client = /*#__PURE__*/function () {
 
       var route = this.constructor._buildRoute({
         base: "".concat(seasonId, "/segments/0/leagues/").concat(this.leagueId),
-        params: "?view=kona_player_info"
+        params: "&view=kona_player_info"
       });
 
       var config = this._buildAxiosConfig({
@@ -13515,7 +13515,7 @@ _defineProperty(Team, "responseMap", {
   name: {
     key: 'location',
     manualParse: function manualParse(responseData, data) {
-      return "".concat(lodash_trim__WEBPACK_IMPORTED_MODULE_2___default()(data.location), " ").concat(lodash_trim__WEBPACK_IMPORTED_MODULE_2___default()(data.nickname));
+      return "".concat(lodash_trim__WEBPACK_IMPORTED_MODULE_2___default()(data.name));
     }
   },
   logoURL: 'logo',

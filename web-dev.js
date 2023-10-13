@@ -10447,18 +10447,23 @@ var Client = /*#__PURE__*/function () {
     value: function getFreeAgents(_ref4) {
       var _this3 = this;
 
-      var seasonId = _ref4.seasonId,
-          scoringPeriodId = _ref4.scoringPeriodId;
+      var seasonId = _ref4.seasonId;
 
       var route = this.constructor._buildRoute({
         base: "".concat(seasonId, "/segments/0/leagues/").concat(this.leagueId),
-        params: "?scoringPeriodId=".concat(scoringPeriodId, "&view=kona_player_info")
+        params: "&view=kona_player_info"
       });
 
       var config = this._buildAxiosConfig({
         headers: {
           'x-fantasy-filter': JSON.stringify({
-            players: {}
+            players: {
+              limit: -1,
+              sortPercOwned: {
+                sortAsc: false,
+                sortPriority: 1
+              }
+            }
           })
         }
       });
@@ -11722,7 +11727,7 @@ _defineProperty(Team, "responseMap", {
   name: {
     key: 'location',
     manualParse: function manualParse(responseData, data) {
-      return "".concat(lodash_trim__WEBPACK_IMPORTED_MODULE_2___default()(data.location), " ").concat(lodash_trim__WEBPACK_IMPORTED_MODULE_2___default()(data.nickname));
+      return "".concat(lodash_trim__WEBPACK_IMPORTED_MODULE_2___default()(data.name));
     }
   },
   logoURL: 'logo',

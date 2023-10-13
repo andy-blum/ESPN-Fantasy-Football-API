@@ -150,7 +150,7 @@ class Client {
   getTeamsAtWeek({ seasonId, scoringPeriodId }) {
     const route = this.constructor._buildRoute({
       base: `${seasonId}/segments/0/leagues/${this.leagueId}`,
-      params: `?scoringPeriodId=${scoringPeriodId}&view=mRoster&view=mTeam`
+      params: '?view=mRoster&view=mTeam'
     });
 
     return axios.get(route, this._buildAxiosConfig()).then((response) => {

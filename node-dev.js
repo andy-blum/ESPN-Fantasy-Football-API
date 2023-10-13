@@ -12286,7 +12286,7 @@ var Client = /*#__PURE__*/function () {
 
       var route = this.constructor._buildRoute({
         base: "".concat(seasonId, "/segments/0/leagues/").concat(this.leagueId),
-        params: "?scoringPeriodId=".concat(scoringPeriodId, "&view=mRoster&view=mTeam")
+        params: '?view=mRoster&view=mTeam'
       });
 
       return axios__WEBPACK_IMPORTED_MODULE_4___default.a.get(route, this._buildAxiosConfig()).then(function (response) {

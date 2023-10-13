@@ -12239,7 +12239,7 @@ var Client = /*#__PURE__*/function () {
 
       var route = this.constructor._buildRoute({
         base: "".concat(seasonId, "/segments/0/leagues/").concat(this.leagueId),
-        params: "&view=kona_player_info"
+        params: '?view=kona_player_info'
       });
 
       var config = this._buildAxiosConfig({

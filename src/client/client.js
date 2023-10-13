@@ -114,7 +114,7 @@ class Client {
   getFreeAgents({ seasonId }) {
     const route = this.constructor._buildRoute({
       base: `${seasonId}/segments/0/leagues/${this.leagueId}`,
-      params: `&view=kona_player_info`
+      params: '?view=kona_player_info'
     });
 
     const config = this._buildAxiosConfig({
